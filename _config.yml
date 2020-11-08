@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Sun
+subtitle: '个人博客'
+description: '记录生活，分享技术'
 keywords:
-author: John Doe
-language: en
+author: kkSun
+language: zh-Hans
 timezone: ''
 
 # URL
@@ -126,3 +126,9 @@ live2d:
   react:
     opacityDefault: 0.7
     opacityOnHover: 0.2
+
+menu:
+  # home: /
+  文章: /archives
+  分类: /about
+  标签: /categories
