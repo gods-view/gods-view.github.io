@@ -7,8 +7,8 @@ title: Sun
 subtitle: '个人博客'
 description: '记录生活，分享技术'
 keywords:
-author: kkSun
-language: zh-Hans
+author: Mr.Sun
+language: zh-CN
 timezone: ''
 
 # URL
@@ -132,3 +132,10 @@ menu:
   文章: /archives
   分类: /about
   标签: /categories
+  时间轴: /timeline
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
