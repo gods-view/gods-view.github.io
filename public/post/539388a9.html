@@ -17,15 +17,15 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":-1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="go基础数据类型 1. 结构体和指针与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义： 1type Point struct &amp;#123; X, Y int &amp;#125;  先来定义一个简单的struct类型，名为Point，表示内存中两个相邻的整数。  Point&amp;#123;10,20&amp;#125;表示一个已初始化的Point类型。对它进行取地址表示一个指向刚">
+  <meta name="description" content="1. 结构体和指针与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义： 1type Point struct &amp;#123; X, Y int &amp;#125;  先来定义一个简单的struct类型，名为Point，表示内存中两个相邻的整数。  Point&amp;#123;10,20&amp;#125;表示一个已初始化的Point类型。对它进行取地址表示一个指向刚刚分配和初始化的P">
 <meta property="og:type" content="article">
-<meta property="og:title" content="first">
-<meta property="og:url" content="http://example.com/2021/02/25/first/index.html">
+<meta property="og:title" content="go基础数据类型">
+<meta property="og:url" content="http://example.com/post/539388a9.html">
 <meta property="og:site_name" content="Sun">
-<meta property="og:description" content="go基础数据类型 1. 结构体和指针与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义： 1type Point struct &amp;#123; X, Y int &amp;#125;  先来定义一个简单的struct类型，名为Point，表示内存中两个相邻的整数。  Point&amp;#123;10,20&amp;#125;表示一个已初始化的Point类型。对它进行取地址表示一个指向刚">
+<meta property="og:description" content="1. 结构体和指针与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义： 1type Point struct &amp;#123; X, Y int &amp;#125;  先来定义一个简单的struct类型，名为Point，表示内存中两个相邻的整数。  Point&amp;#123;10,20&amp;#125;表示一个已初始化的Point类型。对它进行取地址表示一个指向刚刚分配和初始化的P">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/gods-view/images/master/imageimage-20201202173141496.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/gods-view/images/master/imageimage-20201202173244021.png">
@@ -33,13 +33,13 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/gods-view/images/master/image20201201174947.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/gods-view/images/master/imageimage-20201202173456850.png">
 <meta property="article:published_time" content="2021-02-25T13:33:44.000Z">
-<meta property="article:modified_time" content="2021-02-26T10:22:41.454Z">
+<meta property="article:modified_time" content="2021-03-01T06:46:49.445Z">
 <meta property="article:author" content="Mr.Sun">
 <meta property="article:tag" content="Go">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/gods-view/images/master/imageimage-20201202173141496.png">
 
-<link rel="canonical" href="http://example.com/2021/02/25/first/">
+<link rel="canonical" href="http://example.com/post/539388a9.html">
 
 
 <script id="page-configurations">
@@ -52,7 +52,7 @@
   };
 </script>
 
-  <title>first | Sun</title>
+  <title>go基础数据类型 | Sun</title>
   
 
 
@@ -154,11 +154,6 @@
     <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
 
   </li>
-        <li class="menu-item menu-item-sitemap">
-
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
-
-  </li>
         <li class="menu-item menu-item-timeline">
 
     <a href="/timeline/" rel="section"><i class="fa fa-stream fa-fw"></i>时间线</a>
@@ -201,10 +196,8 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+
+  <a href="https://github.com/gods-view" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
 
     <main class="main">
@@ -219,7 +212,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/02/25/first/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/post/539388a9.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://raw.githubusercontent.com/gods-view/images/master/image14725.jpg">
@@ -232,7 +225,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          first
+          go基础数据类型
         </h1>
 
         <div class="post-meta">
@@ -249,16 +242,51 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-26 18:22:41" itemprop="dateModified" datetime="2021-02-26T18:22:41+08:00">2021-02-26</time>
+                <time title="修改时间：2021-03-01 14:46:49" itemprop="dateModified" datetime="2021-03-01T14:46:49+08:00">2021-03-01</time>
               </span>
 
           
-            <span id="/2021/02/25/first/" class="post-meta-item leancloud_visitors" data-flag-title="first" title="阅读次数">
+            <span id="/post/539388a9.html" class="post-meta-item leancloud_visitors" data-flag-title="go基础数据类型" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/post/539388a9.html#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/post/539388a9.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>8.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
             </span>
 
         </div>
@@ -270,8 +298,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="go基础数据类型"><a href="#go基础数据类型" class="headerlink" title="go基础数据类型"></a>go基础数据类型</h1><hr>
-<h2 id="1-结构体和指针"><a href="#1-结构体和指针" class="headerlink" title="1. 结构体和指针"></a>1. 结构体和指针</h2><p>与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义：</p>
+        <h2 id="1-结构体和指针"><a href="#1-结构体和指针" class="headerlink" title="1. 结构体和指针"></a>1. 结构体和指针</h2><p>与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义：</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Point <span class="keyword">struct</span> &#123; X, Y <span class="keyword">int</span> &#125;</span><br></pre></td></tr></table></figure>
 
 <p>先来定义一个简单的struct类型，名为Point，表示内存中两个相邻的整数。</p>
@@ -385,10 +412,28 @@
     
     
     
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Mr.Sun
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/post/539388a9.html" title="go基础数据类型">http://example.com/post/539388a9.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
 
       <footer class="post-footer">
+          
           <div class="post-tags">
-              <a href="/tags/Go/" rel="tag"># Go</a>
+              <a href="/tags/Go/" rel="tag"><i class="fa fa-tag"></i> Go</a>
           </div>
 
         
@@ -397,10 +442,13 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/02/24/hello-world/" rel="prev" title="Hello World">
+    <a href="/post/4a17b156.html" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/post/3054e9a7.html" rel="next" title="testOpen">
+      testOpen <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -413,6 +461,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -459,7 +508,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#go%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">go基础数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E6%8C%87%E9%92%88"><span class="nav-number">1.1.</span> <span class="nav-text">1. 结构体和指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">1.2.</span> <span class="nav-text">2. 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-slice"><span class="nav-number">1.3.</span> <span class="nav-text">3. slice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-map%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.4.</span> <span class="nav-text">4. map的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%A2%9E%E9%87%8F%E6%89%A9%E5%AE%B9"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 增量扩容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E6%9F%A5%E6%89%BE%E8%BF%87%E7%A8%8B"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 查找过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%8F%92%E5%85%A5%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 插入过程分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-map%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 map设计中的性能优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-nil%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.5.</span> <span class="nav-text">5. nil类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-interface"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1 interface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-string%E5%92%8Cslice"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 string和slice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-channel%E5%92%8Cmap"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3 channel和map</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%93%E6%9E%84%E4%BD%93%E5%92%8C%E6%8C%87%E9%92%88"><span class="nav-number">1.</span> <span class="nav-text">1. 结构体和指针</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">2.</span> <span class="nav-text">2. 字符串</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-slice"><span class="nav-number">3.</span> <span class="nav-text">3. slice</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-map%E7%9A%84%E5%AE%9E%E7%8E%B0"><span class="nav-number">4.</span> <span class="nav-text">4. map的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 数据结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%A2%9E%E9%87%8F%E6%89%A9%E5%AE%B9"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 增量扩容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E6%9F%A5%E6%89%BE%E8%BF%87%E7%A8%8B"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 查找过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E6%8F%92%E5%85%A5%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 插入过程分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-map%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 map设计中的性能优化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-nil%E7%B1%BB%E5%9E%8B"><span class="nav-number">5.</span> <span class="nav-text">5. nil类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-interface"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 interface</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-string%E5%92%8Cslice"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 string和slice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-channel%E5%92%8Cmap"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 channel和map</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -475,7 +524,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -507,6 +556,13 @@
 
       </div>
 
+      <!--网易云链接-->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=569214247&auto=1&height=66"></iframe>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
     </div>
   </aside>
   <div id="sidebar-dimmer"></div>
@@ -528,105 +584,48 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Mr.Sun</span>
+  <span class="author" itemprop="copyrightHolder">salad</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8 分钟</span>
 </div>
-  <!--<div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div>
-  -->
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
 
 
 
-<script>
-  (function() {
-    function leancloudSelector(url) {
-      url = encodeURI(url);
-      return document.getElementById(url).querySelector('.leancloud-visitors-count');
-    }
-
-    function addCount(Counter) {
-      var visitors = document.querySelector('.leancloud_visitors');
-      var url = decodeURI(visitors.id);
-      var title = visitors.dataset.flagTitle;
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          if (results.length > 0) {
-            var counter = results[0];
-            leancloudSelector(url).innerText = counter.time + 1;
-            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
-              .catch(error => {
-                console.error('Failed to save visitor count', error);
-              });
-          } else {
-              leancloudSelector(url).innerText = 'Counter not initialized! More info at console err msg.';
-              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
-            
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    function showTime(Counter) {
-      var visitors = document.querySelectorAll('.leancloud_visitors');
-      var entries = [...visitors].map(element => {
-        return decodeURI(element.id);
-      });
-
-      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
-        .then(response => response.json())
-        .then(({ results }) => {
-          for (let url of entries) {
-            let target = results.find(item => item.url === url);
-            leancloudSelector(url).innerText = target ? target.time : 0;
-          }
-        })
-        .catch(error => {
-          console.error('LeanCloud Counter Error', error);
-        });
-    }
-
-    let { app_id, app_key, server_url } = {"enable":true,"app_id":"lYSgfq7hzV0yTHcbbG81D1Ni-9Nh9j0Va","app_key":"bByLxwwWYGgxbrKpBf8VfQV5","server_url":null,"security":true};
-    function fetchData(api_server) {
-      var Counter = (method, url, data) => {
-        return fetch(`${api_server}/1.1${url}`, {
-          method,
-          headers: {
-            'X-LC-Id'     : app_id,
-            'X-LC-Key'    : app_key,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data)
-        });
-      };
-      if (CONFIG.page.isPost) {
-        if (CONFIG.hostname !== location.hostname) return;
-        addCount(Counter);
-      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
-        showTime(Counter);
-      }
-    }
-
-    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
-
-    if (api_server) {
-      fetchData(api_server);
-    } else {
-      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
-        .then(response => response.json())
-        .then(({ api_server }) => {
-          fetchData('https://' + api_server);
-        });
-    }
-  })();
-</script>
 
 
       </div>
@@ -680,10 +679,45 @@
       quicklink({
         timeout : 3000,
         priority: true,
-        ignores : [uri => uri.includes('#'),uri => uri === 'http://example.com/2021/02/25/first/',]
+        ignores : [uri => uri.includes('#'),uri => uri === 'http://example.com/post/539388a9.html',]
       });
       });
   </script>
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'lYSgfq7hzV0yTHcbbG81D1Ni-9Nh9j0Va',
+      appKey     : 'bByLxwwWYGgxbrKpBf8VfQV5',
+      placeholder: "欢迎一起讨论交流啊",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : true,
+      serverURLs : ''
+    });
+    var infoEle = document.querySelector('#comments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0){
+      infoEle.childNodes.forEach(function(item) {
+        item.parentNode.removeChild(item);
+      });
+    }
+  }, window.Valine);
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"superSample":2,"width":120,"height":200,"position":"right","hOffset":20,"vOffset":50},"mobile":{"show":true,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>

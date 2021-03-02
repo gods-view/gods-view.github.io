@@ -15,7 +15,10 @@ timezone: ''
 ## If your site is put in a subdirectory, set url as 'http://example.com/child' and root as '/child/'
 url: http://example.com
 root: /
-permalink: :year/:month/:day/:title/
+permalink: post/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -139,3 +142,12 @@ search:
   field: post
   format: html
   limit: 10000
+
+encrypt:
+    enable: true
+
+symbols_count_time:
+  symbols: true #是否统计字数
+  time: true #是否统计阅读时长
+  total_symbols: true #是否统计总字数
+  total_time: true #是否统计总阅读时长

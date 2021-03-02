@@ -1,14 +1,14 @@
 ---
-title: first
+title: go基础数据类型
+tags:
+  - Go
+keywords: 博客文章密码
+abstract: 密码：first
+message: 输入密码，查看文章
+abbrlink: 539388a9
 date: 2021-02-25 21:33:44
-tags: [Go]
+password:
 ---
-
-# go基础数据类型
-
-------
-
-
 
 ## 1. 结构体和指针
 

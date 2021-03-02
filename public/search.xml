@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Hello World</title>
-    <url>/2021/02/24/hello-world/</url>
+    <url>/post/4a17b156.html</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -21,10 +21,14 @@
 ]]></content>
   </entry>
   <entry>
-    <title>first</title>
-    <url>/2021/02/25/first/</url>
-    <content><![CDATA[<h1 id="go基础数据类型"><a href="#go基础数据类型" class="headerlink" title="go基础数据类型"></a>go基础数据类型</h1><hr>
-<h2 id="1-结构体和指针"><a href="#1-结构体和指针" class="headerlink" title="1. 结构体和指针"></a>1. 结构体和指针</h2><p>与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义：</p>
+    <title>testOpen</title>
+    <url>/post/3054e9a7.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>go基础数据类型</title>
+    <url>/post/539388a9.html</url>
+    <content><![CDATA[<h2 id="1-结构体和指针"><a href="#1-结构体和指针" class="headerlink" title="1. 结构体和指针"></a>1. 结构体和指针</h2><p>与C相同而与Java不同的是，Go语言让程序员决定何时使用指针。举例来说，这种类型定义：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Point <span class="keyword">struct</span> &#123; X, Y <span class="keyword">int</span> &#125;</span><br></pre></td></tr></table></figure>
 
 <p>先来定义一个简单的struct类型，名为Point，表示内存中两个相邻的整数。</p>
