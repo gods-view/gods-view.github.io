@@ -101,7 +101,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: next-reloaded
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -111,24 +111,25 @@ deploy:
   branch: master
 
 live2d:
-  model:
-    scale: 1
-    hHeadPos: 0.5
-    vHeadPos: 0.618
-    use: live2d-widget-model-hijiki # 下载的动画模型名称
-  display:
-    superSample: 2
-    width: 120
-    height: 200
-    position: right # 模型在网页显示位置
-    hOffset: 20
-    vOffset: 50
-  mobile:
-    show: true  # 移动设备是否显示
-    scale: 0.5
-  react:
-    opacityDefault: 0.7
-    opacityOnHover: 0.2
+  enable: false
+#  model:
+#    scale: 1
+#    hHeadPos: 0.5
+#    vHeadPos: 0.618
+#    use: live2d-widget-model-hijiki # 下载的动画模型名称
+#  display:
+#    superSample: 2
+#    width: 120
+#    height: 200
+#    position: right # 模型在网页显示位置
+#    hOffset: 20
+#    vOffset: 50
+#  mobile:
+#    show: true  # 移动设备是否显示
+#    scale: 0.5
+#  react:
+#    opacityDefault: 0.7
+#    opacityOnHover: 0.2
 
 menu:
   # home: /
