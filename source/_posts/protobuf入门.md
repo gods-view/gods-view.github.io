@@ -12,8 +12,6 @@ abstract:
 
 # 什么是Protobuf
 
----
-
 在网络通信和通用数据交换等应用场景中经常使用的技术是 JSON 或 XML，还有一种类型Protobuf。
 
 Protobuf是Protocol Buffers的简称，它是Google出品的性能优异、跨语言、跨平台的序列化库，用于描述一种轻便高效的结构化数据存储格式，并于2008年对外开源。Protobuf可以用于结构化数据串行化，或者说序列化。它的设计非常适用于在网络通讯中的数据载体，很适合做数据存储或 RPC 数据交换格式，它序列化出来的数据量少再加上以 K-V 的方式来存储数据，对消息的版本兼容性非常强，可用于通讯协议、数据存储等领域的语言无关、平台无关、可扩展的序列化结构数据格式。开发者可以通过 ProtoBuf 定义数据结构，然后通过 ProtoBuf 工具生成各种语言版本的数据结构类库，用于操作 ProtoBuf 协议数据
@@ -25,12 +23,10 @@ Protocol Buffers 是一种灵活，高效，自动化机制的结构数据序列
 Protobuf中最基本的数据单元是message，是类似Go语言中结构体的存在。在message中可以嵌套message或其它的基础数据类型的成员。
 
 > 序列化(serialization、marshalling)的过程是指将数据结构或者对象的状态转换成可以存储(比如文件、内存)或者传输的格式(比如网络)。反向操作就是反序列化(deserialization、unmarshalling)的过程。
-
+<!--more-->
 ![image-20220818145636178](https://raw.githubusercontent.com/gods-view/images/master/imageimage-20220818145636178.png)
 
 # 定义Message
-
----
 
 使用 ProtoBuf ，首先需要通过 ProtoBuf 语法定义数据结构(消息)，这些定义好的数据结构保存在.proto为后缀的文件中。
 

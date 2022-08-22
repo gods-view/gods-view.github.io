@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Sun
-subtitle: '个人博客'
-description: '澄澈的空与海'
+title: Sun #网站标题（博客站点名字）。
+subtitle: '个人博客' #网站副标题，显示在标题下方
+description: '澄澈的空与海' #个人描述，类似签名
 keywords:
-author: Mr.Sun
-language: zh-CN
+author: Mr.Sun #博客文章作者
+language: zh-CN #设置博客站点语言为中文
 timezone: ''
 
 # URL
