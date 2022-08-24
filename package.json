@@ -28,6 +28,7 @@
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^2.0.0",
     "hexo-symbols-count-time": "^0.7.1",
+    "hexo-tag-aplayer": "^3.0.4",
     "hexo-theme-next": "^8.12.3",
     "hexo-wordcount": "^6.0.1",
     "live2d-widget-model-hijiki": "^1.0.5"
